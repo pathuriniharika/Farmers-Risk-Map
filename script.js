@@ -72,7 +72,7 @@ earthquakeLayer.addTo(map);
 weatherLayer.addTo(map);
 
 // Add controls to toggle between layers
-L.control.layers({ "Earthquakes": earthquakeLayer, "Weather Alerts": weatherLayer }).addTo(map);
+L.control.layers({ "Earthquakes": earthquakeLayer, "Weather Alerts (US Only)": weatherLayer }).addTo(map);
 
 // Add a legend
 var legend = L.control({ position: 'bottomright' });
@@ -82,7 +82,7 @@ legend.onAdd = function () {
         <b>Legend</b><br>
         <i style="background: red; width: 12px; height: 12px; display: inline-block; margin-right: 6px;"></i> Severe Alerts<br>
         <i style="background: orange; width: 12px; height: 12px; display: inline-block; margin-right: 6px;"></i> Moderate Alerts<br>
-        <i style="background: yellow; width: 12px; height: 12px; display: inline-block; margin-right: 6px;"></i> Weather Alerts
+        <i style="background: yellow; width: 12px; height: 12px; display: inline-block; margin-right: 6px;"></i> Weather Alerts (US Only)
     `;
     return div;
 };
