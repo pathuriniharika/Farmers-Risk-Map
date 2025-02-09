@@ -11,7 +11,7 @@ Farmers Risk Map is an interactive web application that visualizes **real-time e
 - 📌 **State Outlines**: US State boundaries for better visualization.
 
 ## 🚀 Live Demo
-**🔗 View the project live**: https://pathuriniharika.github.io/Farmers-Risk-Map/](https://pathuriniharika.github.io/Farmers-Risk-Map/
+**🔗 View the project live**: https://pathuriniharika.github.io/Farmers-Risk-Map/
 
 ## 🛠️ Technologies Used
 - **Leaflet.js** → Interactive Mapping
