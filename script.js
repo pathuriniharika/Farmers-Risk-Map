@@ -107,12 +107,28 @@ document.getElementById("theme-toggle").addEventListener("click", function () {
     isDarkMode = !isDarkMode;
 });
 
+// Add both layers to the map
+earthquakeLayer.addTo(map);
+weatherLayer.addTo(map);
+
+// Check if there are no alerts in the default view
+if (earthquakeLayer.getLayers().length === 0 && weatherLayer.getLayers().length === 0) {
+    L.popup()
+        .setLatLng(map.getCenter())
+        .setContent(`
+            <b>No active earthquake or weather alerts in the default view.</b><br>
+            Please zoom out or pan the map to explore other areas.
+        `)
+        .openOn(map);
+}
+
 // Add a welcome popup
 L.popup()
     .setLatLng(map.getCenter())
     .setContent(`
         <b>Welcome to Farmers Risk Map!</b><br>
         Explore real-time earthquake and weather alerts.<br>
-        Use the legend and toggle layers for details.
+        - Click on icons for details.<br>
+        - Zoom out or pan to discover more alerts.
     `)
     .openOn(map);
