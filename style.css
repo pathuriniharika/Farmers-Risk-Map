@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+h2 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+#map {
+    height: 90vh;
+    width: 100%;
+    border: 1px solid #ddd;
+}
+
+.custom-cluster-icon {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+}
+
+/* Styling for Popups in Dark Mode */
+.dark-mode .leaflet-popup-content-wrapper {
+    background-color: #333;
+    color: #fff;
+}
+
+.dark-mode .leaflet-popup-tip {
+    background-color: #333;
+}
+
+/* Styling for Legend in Dark Mode */
+.dark-mode .info.legend {
+    background: #444;
+    color: #eee;
+    border: 1px solid #eee;
+}
